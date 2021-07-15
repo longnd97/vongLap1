@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <button type="button" onclick="play()">Chơi
+    </button>
+</form>
+<script>
+    function play() {
+        let a = +prompt("Nhập vào một khoảng từ ");
+        let b = +prompt("đến");
+        let c = (Math.floor((Math.random() * b) + a));
+        for (let i = 0; i < 3; i++) {
+            let d = +prompt("Nhập giá trị đoán lần " + (i + 1));
+            if (c == d) {
+                alert("Chúc mừng");
+                break;
+            } else if (c > d) {
+                alert("Lớn hơn");
+            } else alert("Nhỏ hơn");
+        }
+    }
+</script>
+</body>
+</html>
